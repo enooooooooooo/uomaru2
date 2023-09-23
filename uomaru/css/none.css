@@ -1,0 +1,186 @@
+/*topスマホ旧デザイン*/
+
+
+
+@media screen and (max-width:480px){
+
+  @font-face {
+    font-family: 'MyFont';
+    src: url(../myfont/font14.ttf);
+  }
+  
+  body {
+    font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+    font-size: 15px;
+    background-image: url(../img/bg4.jpg)!important;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo {
+    text-align: center;
+  }
+  
+  .logo img {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 100px;
+  }
+  
+  .header {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap; /* スマートフォンではリスト項目が折り返すように */
+  }
+  
+  .header ul li {
+    width: 100%; /* スマートフォンでは幅を100%に */
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* ボーダーを下に設定 */
+    margin-top: 10px;
+    padding-bottom: 10px; /* 下部の余白を追加 */
+  }
+
+  .header ul li:last-child {
+    border-bottom: none; /* 最後の要素の右側の境界線を除去 */
+  }
+  
+  #slider {
+    margin-top: 10px;
+    width: 100%;
+    height: 240px!important; /* スマートフォン用に高さを調整 */
+  }
+  
+  .slider-text {
+    margin-top: 100px; /* スマートフォン用に調整 */
+    text-align: center;
+  }
+  
+  .slider-text img {
+    width: 75%; /* 例えば、50%に縮小 */
+    height: auto; /* アスペクト比を維持するためにheightは自動で計算されます */
+    position: absolute;
+    top: 25%;
+    left: 12%!important;
+
+  }
+  
+  .scroll-space {
+    box-sizing: border-box;
+    padding-top: 50px; /* スマートフォン用に調整 */
+    height: auto; /* 自動調整 */
+    color: #fff;
+  }
+  
+  .scroll-space .title1 {
+    color: #000;
+    padding-top: 20px; /* スマートフォン用に調整 */
+    display: flex;
+    flex-direction: column; /* スマートフォンでは縦に並べる */
+    align-items: center;
+  }
+  
+  .scroll-space .title1 .text {
+    font-size: 20px; /* スマートフォン用に調整 */
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .big {
+    margin-top: 20px;
+    font-size: 30px; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title1 .text h1 {
+    margin: 20px 0 0 0; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title1 img {
+    width: 80%; /* 画像サイズを調整 */
+    height: auto;
+    margin: 0 0 20px 0; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title1 .oshinagaki {
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+                  -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+                  0px 1px 0 #FFF,  0-1px 0 #FFF,
+                  -1px 0 0 #FFF, 1px 0 0 #FFF;
+    color: #333;
+    font-size: 60px; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title2 {
+    color: #000;
+    padding-top: 20px; /* スマートフォン用に調整 */
+    display: flex;
+    flex-direction: column; /* スマートフォンでは縦に並べる */
+    align-items: center;
+    margin-top: 20px; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title2 .text {
+    font-size: 18px; /* スマートフォン用に調整 */
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .scroll-space .title2 .text h1 {
+    margin: 0; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title2 img {
+    width: 80%; /* 画像サイズを調整 */
+    height: auto;
+    margin-top: 40px; /* スマートフォン用に調整 */
+  }
+  
+  .scroll-space .title2 .title2 {
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+                  -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+                  0px 1px 0 #FFF,  0-1px 0 #FFF,
+                  -1px 0 0 #FFF, 1px 0 0 #FFF;
+    color: #333;
+    font-size: 60px; /* スマートフォン用に調整 */
+  }
+  
+  .slidein {
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: all 1s;
+  }
+  
+  .slidein.scrollin {
+    transform: translate(0, 0) !important;
+    opacity: 1 !important;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  }
+  
+  .footer .text {
+    text-align: center;
+  }
+      
+}

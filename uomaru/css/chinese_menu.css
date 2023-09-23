@@ -1,0 +1,676 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'MyFont';
+	src: url(../myfont/font14.ttf);
+}
+
+@font-face {
+	font-family: 'MyFont2';
+	src: url(../myfont/font19.otf);
+}
+
+body{
+  font-family: MyFont2,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+  background-image: url("img/bg.img");
+  background-image: url(../img/bg49.jpg)!important;
+  background-attachment: fixed!important;/*背景固定*/
+
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+.logo{
+  text-align: center;
+  margin-top: 10px;
+}
+.logo img{
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 10%;
+  margin-top: 10px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: '游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+
+  padding-bottom: 60px!important;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0))!important;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  font-size: 20px;
+}
+
+.header ul li {
+  width: 100%;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.header ul li:last-child {
+  border-right: none; /* 最後の要素の右側の境界線を除去 */
+}
+
+h1 {
+  font-size: 40px!important;
+  margin-top: 150px!important;
+  text-align: center; 
+}
+
+.language{
+  padding-left: 0px!important;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.lang {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.japanese,.chinese,.english {
+  margin: 30px;
+}
+
+/* .menu を flex コンテナにする */
+.menu {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  align-items: center; /* 子要素を水平方向に中央揃え */
+  justify-content: center; /* 子要素を垂直方向に中央揃え */
+  margin-top: 50px;
+  max-width: 100%;
+}
+
+
+.image{
+  position: relative;/*//////////////////////////*/
+  width: 80%;
+  background-color: #333;
+  position:relative;
+  text-align: center;
+  box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.image h2 {
+  font-size: 80px;
+  position: absolute;/*絶対配置*/
+  color: black;/*文字は白に*/
+  text-shadow: 0 120px 252px 20px rgba(0, 0, 0, .5);
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:100%;
+  text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+              -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+              0px 1px 0 #FFF,  0-1px 0 #FFF,
+              -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+.nigiri{
+  width: 100%!important;
+  height: 200px!important;
+  object-fit: cover!important;
+}
+
+/* .menu-section を flex コンテナにする */
+.menu-section {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  align-items: center; /* 子要素を水平方向に中央揃え */
+  justify-content: center; /* 子要素を垂直方向に中央揃え */
+  margin-bottom: 60px; /* 下側に余白を設定 */
+  width: 100%;
+}
+
+/* メニューテーブルの共通スタイル */
+.menu-table {
+  width: 40%; /* テーブルの幅を50%に設定 */
+  border-collapse: collapse; /* セルの間の境界線を非表示に */
+  margin-top: 20px; /* 上側に余白を設定 */
+  font-size: 25px;
+  box-shadow: 0 30px 50px 30px rgb(255, 255, 255, .35);
+  background-color: rgba(255, 255, 255, .35);
+  margin-bottom: 20px;
+}
+
+.xyz{
+  margin: 2em auto;
+  padding:2em;/*内側余白*/
+  border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+}
+
+/* ヘッダーセルのスタイル */
+.menu-table th {
+  padding: 10px;
+  
+}
+
+/* 左側のネタ名セルのスタイル */
+table td:first-child {
+  width: 70%; /* ネタ名セルの幅を調整 */
+  padding: 10px; /* セル内の余白を設定 */
+  text-align: left; /* テキストを左寄せにする */
+}
+
+/* 右側の値段セルのスタイル */
+table td:last-child {
+  width: 30%; /* 値段セルの幅を調整 */
+  padding: 10px; /* セル内の余白を設定 */
+  text-align: right; /* テキストを中央寄せにする */
+}
+
+table th:first-child {
+  text-align: left;
+  padding-left: 15%;
+}
+
+table tr {
+  margin-bottom: 20px;
+}
+
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  padding-bottom: 30px;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:639px){
+
+
+  
+  @font-face {
+    font-family: 'MyFont';
+    src: url(../myfont/font14.ttf);
+  }
+  
+  
+  body{
+    font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+    background-image: url("img/bg.img");
+    background-image: url(../img/bg49.jpg)!important;
+    background-attachment: fixed!important;/*背景固定*/
+  
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .logo img {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 20%;
+    margin-top: 10px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;/*////////////////////*/
+  
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap; /* 画面幅に合わせて折り返す */
+  }
+  
+  .header ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* ボーダーを下に設定 */
+    margin-top: 10px;
+    padding-bottom: 10px; /* 下部の余白を追加 */
+    border-right: none;/*要素の右側の境界線を除去*/
+  }
+  
+  .header ul li:last-child {
+    border-bottom: none;
+  }
+  
+  h1 {
+    font-size: 28px!important;
+    margin-top: 300px!important;
+    text-align: center; 
+  }
+
+  
+  .language{
+    padding-left: 0px!important;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .lang {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .japanese,.chinese,.english {
+    margin: 30px;
+  }
+
+  /* .menu を flex コンテナにする */
+  .menu {
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 子要素を水平方向に中央揃え */
+    justify-content: center; /* 子要素を垂直方向に中央揃え */
+    margin-top: 50px;
+    max-width: 100%;
+  }
+  
+  .image{
+    position: relative;/*//////////////////////////*/
+    width: 80%;
+    background-color: #333;
+    text-align: center;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  h2 {
+    font-size: 40px!important;
+    position: absolute;/*絶対配置*/
+    color: black;/*文字は白に*/
+    text-shadow: 0 120px 252px 20px rgba(0, 0, 0, .5);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+                -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+                0px 1px 0 #FFF,  0-1px 0 #FFF,
+                -1px 0 0 #FFF, 1px 0 0 #FFF;
+  }
+  .nigiri{
+    width: 100%!important;
+    height: 10%!important;
+    object-fit: cover!important;
+  }
+  
+  
+  /* .menu-section を flex コンテナにする */
+  .menu-section {
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 子要素を水平方向に中央揃え */
+    justify-content: center; /* 子要素を垂直方向に中央揃え */
+    margin-bottom: 60px; /* 下側に余白を設定 */
+    width: 100%;
+    
+  }
+  
+  /* メニューテーブルの共通スタイル */
+  .menu-table {
+    width: 80%; /* テーブルの幅を80%に設定 */
+    border-collapse: collapse; /* セルの間の境界線を非表示に */
+    margin-top: 20px; /* 上側に余白を設定 */
+    font-size: 14px;
+    box-shadow: 0 30px 50px 30px rgb(255, 255, 255, .35);
+    background-color: rgba(255, 255, 255, .35);
+    margin-bottom: 20px;
+  }
+  
+  .xyz{
+    margin: 2em auto;
+    padding:2em;/*内側余白*/
+    border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+  }
+  
+  /* ヘッダーセルのスタイル */
+  .menu-table th {
+    padding: 10px;
+  }
+  
+  /* 左側のネタ名セルのスタイル */
+  table td:first-child {
+    width: 70%; /* ネタ名セルの幅を調整 */
+    padding: 10px; /* セル内の余白を設定 */
+    text-align: left; /* テキストを左寄せにする */
+  }
+  
+  /* 右側の値段セルのスタイル */
+  table td:last-child {
+    width: 30%; /* 値段セルの幅を調整 */
+    padding: 10px; /* セル内の余白を設定 */
+    text-align: right; /* テキストを中央寄せにする */
+  }
+  
+  table th:first-child {
+    text-align: left;
+    padding-left: 15%;
+  }
+  
+  
+  
+  table tr {
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  font-size: 20px;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:640px) and (max-width:1023px) {
+
+  @font-face {
+    font-family: 'MyFont';
+    src: url(../myfont/font14.ttf);
+  }
+  
+  
+  body{
+    font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+    background-image: url("img/bg.img");
+    background-image: url(../img/bg49.jpg)!important;
+    background-attachment: fixed!important;/*背景固定*/
+  
+  }
+  
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  .logo{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .logo img{
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 10%;
+    margin-top: 10px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-bottom: 60px!important;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0))!important;
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    font-size: 20px;
+  }
+  
+  .header ul li {
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  .header ul li:last-child {
+    border-right: none; /* 最後の要素の右側の境界線を除去 */
+  }
+  
+  h1 {
+    font-size: 40px!important;
+    margin-top: 150px!important;
+    text-align: center; 
+  }
+
+  .language{
+    padding-left: 0px!important;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .lang {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .japanese,.chinese,.english {
+    margin: 30px;
+  }
+  
+  /* .menu を flex コンテナにする */
+  .menu {
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 子要素を水平方向に中央揃え */
+    justify-content: center; /* 子要素を垂直方向に中央揃え */
+    margin-top: 50px;
+    max-width: 100%;
+  }
+  
+  .image{
+    position: relative;/*//////////////////////////*/
+    width: 80%;
+    background-color: #333;
+    position:relative;
+    text-align: center;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+  
+  }
+  
+  h2 {
+    font-size: 80px!important;
+    position: absolute;/*絶対配置*/
+    color: black;/*文字は白に*/
+    text-shadow: 0 120px 252px 20px rgba(0, 0, 0, .5);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    text-shadow:1px 1px 0 #FFF, -1px -1px 0 #FFF,
+                -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+                0px 1px 0 #FFF,  0-1px 0 #FFF,
+                -1px 0 0 #FFF, 1px 0 0 #FFF;
+  }
+  .nigiri{
+    width: 100%!important;
+    height: 200px!important;
+    object-fit: cover!important;
+  }
+  
+  
+  /* .menu-section を flex コンテナにする */
+  .menu-section {
+    display: flex;
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 子要素を水平方向に中央揃え */
+    justify-content: center; /* 子要素を垂直方向に中央揃え */
+    margin-bottom: 60px; /* 下側に余白を設定 */
+    width: 100%;
+    
+  }
+  
+  /* メニューテーブルの共通スタイル */
+  .menu-table {
+    width: 80%; /* テーブルの幅を80%に設定 */
+    border-collapse: collapse; /* セルの間の境界線を非表示に */
+    margin-top: 20px; /* 上側に余白を設定 */
+    font-size: 25px;
+    box-shadow: 0 30px 50px 30px rgb(255, 255, 255, .35);
+    background-color: rgba(255, 255, 255, .35);
+    margin-bottom: 20px;
+  }
+  
+  .xyz{
+    margin: 2em auto;
+    padding:2em;/*内側余白*/
+    border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+  }
+  
+  /* ヘッダーセルのスタイル */
+  .menu-table th {
+    padding: 10px;
+  }
+  
+  /* 左側のネタ名セルのスタイル */
+  table td:first-child {
+    width: 70%; /* ネタ名セルの幅を調整 */
+    padding: 10px; /* セル内の余白を設定 */
+    text-align: left; /* テキストを左寄せにする */
+  }
+  
+  /* 右側の値段セルのスタイル */
+  table td:last-child {
+    width: 30%; /* 値段セルの幅を調整 */
+    padding: 10px; /* セル内の余白を設定 */
+    text-align: right; /* テキストを中央寄せにする */
+  }
+  
+  table th:first-child {
+    text-align: left;
+    padding-left: 15%;
+  }
+  
+  
+  
+  table tr {
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: block;
+  font-size: 20px;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+
+}

@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'MyFont';
+	src: url(../myfont/font14.ttf);
+}
+
+
+
+body{
+  font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+  background-image: url("img/bg.img");
+  background-image: url(../img/bg49.jpg)!important;
+  background-attachment: fixed!important;/*背景固定*/
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
+.logo{
+  text-align: center;
+  margin-top: 10px;
+}
+.logo img{
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 10%;
+  margin-top: 10px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 60px!important;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  background: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 0))!important;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  font-size: 20px;
+}
+
+.header ul li {
+  width: 100%;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.header ul li:last-child {
+  border-right: none; /* 最後の要素の右側の境界線を除去 */
+}
+
+.content {
+  font-size: 25px;
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 150px;
+}
+
+.content h1{
+  text-align: center;
+  margin: 30px 30px;
+  font-size: 40px;
+}
+.content h2{
+  margin: 2em auto;
+  
+  border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+  width: 100%;
+  margin-top: 30px!important;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content ul{
+  list-style: none!important;
+}
+
+
+.thours h2{
+  background-color: rgb(255, 225, 0, .5);
+}
+
+table{
+  width: 100%;
+}
+table tr td:first-child{
+  text-align: left;
+  width: 25%;
+}
+
+table tr td:last-child{
+  text-align: left!important;
+  width: 75%;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:639px){
+  @font-face {
+    font-family: 'MyFont';
+    src: url(../myfont/font14.ttf);
+  }
+  body{
+    font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+    background-image: url("img/bg.img");
+    background-image: url(../img/bg49.jpg)!important;
+    background-attachment: fixed!important;/*背景固定*/
+    width: 100%;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  .logo {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .logo img {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 20%;
+    margin-top: 10px;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;/*////////////////////*/
+  
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap; /* 画面幅に合わせて折り返す */
+  }
+  
+  .header ul li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd; /* ボーダーを下に設定 */
+    margin-top: 10px;
+    padding-bottom: 10px; /* 下部の余白を追加 */
+    border-right: none;/*要素の右側の境界線を除去*/
+  }
+  
+  .header ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .content {
+    font-size: 15px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 300px;
+  }
+  
+  .content h1{
+    text-align: center;
+    margin: 30px 30px;
+    font-size: 28px;
+  }
+  .content h2{
+    margin: 2em auto;
+    font-size: 20px;
+    border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+    width: 100%;
+    margin-top: 30px!important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content ul{
+    list-style: none!important;
+  }
+  
+  
+  .thours h2{
+    background-color: rgb(255, 225, 0, .5);
+  }
+  
+  table{
+    width: 100%;
+  }
+  table tr td:first-child{
+    text-align: left;
+    width: 35%;
+  }
+  
+  table tr td:last-child{
+    text-align: left;
+    width: 65%;
+  }
+  
+  .footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+    display: block;
+  font-size: 20px;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width:640px) and (max-width:1023px) {
+  @font-face {
+    font-family: 'MyFont';
+    src: url(../myfont/font14.ttf);
+  }
+  body{
+    font-family: MyFont,'游明朝','Yu Mincho','YuMincho','Hiragino Mincho Pro',serif;
+    background-image: url("img/bg.img");
+    background-image: url(../img/bg49.jpg)!important;
+    background-attachment: fixed!important;/*背景固定*/
+    width: 100%;
+  }
+  
+  a{
+    text-decoration: none;
+    color: #333;
+  }
+  .logo{
+    text-align: center;
+    margin-top: 10px;
+  }
+  .logo img{
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 10%;
+    margin-top: 10px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    font-size: 20px;
+  }
+  
+  .header ul li {
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-top: 10px;
+  }
+  
+  .header ul li:last-child {
+    border-right: none; /* 最後の要素の右側の境界線を除去 */
+  }
+  
+  .content {
+    font-size: 25px;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 150px;
+  }
+  
+  .content h1{
+    text-align: center;
+    margin: 30px 30px;
+    font-size: 40px;
+  }
+  .content h2{
+    margin: 2em auto;
+    
+    border:double 5px #CCCFD6;/*線の種類・太さ・色*/
+    width: 100%;
+    margin-top: 30px!important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content ul{
+    list-style: none!important;
+  }
+  
+  
+  .thours h2{
+    background-color: rgb(255, 225, 0, .5);
+  }
+  
+  table{
+    width: 100%;
+  }
+  table tr td:first-child{
+    text-align: left;
+    width: 25%;
+  }
+  
+  table tr td:last-child{
+    text-align: left;
+    width: 75%;
+  }
+  
+  .footer {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+    padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.footer .logo2 img {
+  width: 10%;
+  margin-top: 20px;
+}
+
+
+.logo2,
+.name_uomaru,
+.address,
+.tel,
+.cr {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #FFF;
+}
+
+.footer .tel a[href^="tel:"]{
+  pointer-events: none;
+  color: white;
+}
+  
+}

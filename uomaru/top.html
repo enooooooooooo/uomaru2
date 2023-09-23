@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>魚丸-ホーム</title>
+  <meta name="description" content="新鮮な魚を使っています。">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+<link rel="stylesheet" type="text/css" href="css/6-1-4.css">
+</head>
+
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="img/img.jpg" alt="uomaru">
+      
+    </div>
+    <ul>
+      <li><a href="top.html">トップ</a></li>
+      <li><a href="menu.html">お品書き</a></li>
+      <li><a href="contact.html">旬のおすすめ</a></li>
+      <li><a href="time.html">店舗情報</a></li>
+      <li><a href="jobs.html">スタッフ募集</a></li>
+    </ul>
+  </div>
+
+  <div id="slider">
+    <div class="slider-text">
+      <img src="img/img.jpg" alt="img">
+      
+    </div>
+  </div>
+
+
+  <div class="js">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        //画像の設定
+
+  var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
+      if (windowwidth > 768){
+        var responsiveImage = [//PC用の画像
+          { src: "./img/img1.jpg"},
+          { src: "./img/img2.jpg"},
+          { src: "./img/img3.jpg"},
+          { src: "./img/higashi.jpg"}
+        ];
+      } else {
+        var responsiveImage = [//タブレットサイズ（768px）以下用の画像
+          { src: "./img/img1.jpg"},
+          { src: "./img/img2.jpg"},
+          { src: "./img/img3.jpg"}
+        ];
+      }
+
+  //Vegas全体の設定
+
+  $('#slider').vegas({
+      overlay: true,//画像の上に網線やドットのオーバーレイパターン画像を指定。
+      transition: 'fade2',//切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
+      transitionDuration: 2000,//切り替わりのアニメーション時間をミリ秒単位で設定
+      delay: 5000,//スライド間の遅延をミリ秒単位で。
+      animationDuration: 20000,//スライドアニメーション時間をミリ秒単位で設定
+      animation: 'random',//スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
+      slides: responsiveImage,//画像設定を読む
+      //timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
+    });
+
+      });
+    </script>
+  </div>
+
+  <div class="scroll-space">
+
+    <div class="slidein slidein-left title1">
+      <div class="text">
+        <p>北海道の食材を中心とした<br>
+          <div class="big">
+          「北前回転寿司」
+        </div>
+        <br>一貫一貫真心込めて作ります</p>
+        <h1 class="oshinagaki">
+          <a href="menu.html">お品書き</a>
+        </h1>
+      </div>
+        <img src="img/img10.jpg" alt="menu">
+    </div>
+
+
+
+    <div class="slidein slidein-right title2">
+        <img src="img/kodawari.jpg" alt="kodawari">
+        <div class="text">
+          <p>魚丸だけの、魚丸にしかできない<br>こだわりがあります</p>
+          <h1 class="kodawari">
+            <a href="contact.html">旬のおすすめ</a>
+          </h1>
+        </div>
+    </div>
+
+
+  </div>
+  <script src="index.js"></script>
+
+  
+  <footer class="footer">
+    <div class="logo2">
+      <img src="/img/logo.jpg" alt="uomaru">
+    </div>
+    <div class="name_uomaru">
+      <p>回転寿司 魚丸 深川店</p>
+    </div>
+    <div class="address"> 
+      <p>所在地 〒074-0003 北海道深川市3条5-30</p>
+    </div>
+    <div class="tel">
+      <a href="tel:0164345337">電話 0164-34-5337</a>
+    </div>
+    <div class="cr">
+      <br><p>Copyright ©  株式会社白鳥商店 Inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
